@@ -21,8 +21,38 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: [
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/home.png',
+              width: 30,
+              height: 30,
+            ),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/search.png',
+              width: 30,
+              height: 30,
+            ),
+            label: 'Search',
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/profile.png',
+              width: 30,
+              height: 30,
+            ),
+            label: 'Profile',
+          )
+        ],
+      ),
+      body: const Center(
         child: Text("home page"),
       ),
     );
